@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">AndroidClass</string>
     <string name="phone">Phone</string>
+    <string name="header">Student Registrations</string>
+    <string name="registraion_process">Registraion Process</string>
+    <string name="Name1">First Name:</string>
+    <string name="enter_name">enter name</string>
+    <string name="course">Gender:</string>
+    <string name="btech">Male</string>
+    <string name="mtech">Female</string>
+    <string name="enter_lastname">enter lastname</string>
+    <string name="state">State/City:</string>
+    <string name="last_name">last name:</string>
 </resources>

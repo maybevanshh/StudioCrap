@@ -1,27 +1,224 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Background"
+    android:contentDescription="@string/app_name"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:id="@+id/Header"
+        android:background="@color/Primary_body"
+        android:layout_alignParentTop="true"
+        />
 
-    <com.google.android.material.card.MaterialCardView
+    <ImageView
+        android:id="@+id/sscp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="@dimen/cardview_default_radius"
-        app:cardBackgroundColor="#4A4848"
-        app:cardElevation="6dp"
-        app:cardMaxElevation="10dp">
+        android:layout_alignBaseline="@+id/Header"
+        android:layout_alignBottom="@+id/Header"
+        android:contentDescription="@string/registraion_process"
+        android:scaleType="centerCrop"
+        card_view:srcCompat="@drawable/scppng"
+        tools:ignore="ImageContrastCheck" />
 
-        <com.google.android.material.textview.MaterialTextView
-            android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Header"
+        android:background="@color/Backscroll">
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/app_name">
+            android:orientation="vertical">
 
-        </com.google.android.material.textview.MaterialTextView>
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16sp"
+                card_view:cardBackgroundColor="@color/card_back"
+                android:elevation="50dp"
+                card_view:cardCornerRadius="16dp">
 
-    </com.google.android.material.card.MaterialCardView>
-</ScrollView>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16sp">
+
+                    <TextView
+                        android:id="@+id/namedisp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/Name1"
+                        android:textColor="#ffffff">
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/nameedit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@+id/namedisp"
+                        android:hint="@string/enter_name"
+                        android:textColor="#000000">
+
+                    </EditText>
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16sp"
+                card_view:cardBackgroundColor="@color/card_back"
+                android:elevation="50dp"
+                card_view:cardCornerRadius="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16sp">
+
+                    <TextView
+                        android:id="@id/namedisp2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/last_name"
+                        android:textColor="#ffffff">
+
+                    </TextView>
+
+                    <EditText
+                        android:id="@+id/nameedit2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="25dp"
+                        android:layout_toEndOf="@+id/namedisp2"
+                        android:hint="@string/enter_lastname"
+                        android:textColor="#ffffff">
+
+                    </EditText>
+
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16sp"
+                card_view:cardBackgroundColor="@color/card_back"
+                android:elevation="50dp"
+                card_view:cardCornerRadius="16dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/namedisp3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/course"
+                        android:textColor="#ffffff">
+
+                    </TextView>
+
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_alignParentTop="true"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/btech">
+
+                        </RadioButton>
+
+                        <RadioButton
+                            android:layout_width="108dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/mtech">
+
+                        </RadioButton>
+
+                    </RadioGroup>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16sp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="16sp"
+                card_view:cardBackgroundColor="@color/card_back"
+                android:elevation="50dp"
+                card_view:cardCornerRadius="16dp">
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/namedisp4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:text="@string/state"
+                        android:textColor="#ffffff">
+
+                    </TextView>
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:id="@+id/dropstate">
+
+                    </Spinner>
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="80dp"
+                        android:id="@+id/dropciti"
+                        android:layout_below="@+id/dropstate">
+
+                    </Spinner>
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
